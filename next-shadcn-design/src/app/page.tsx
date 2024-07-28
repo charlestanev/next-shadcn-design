@@ -1,19 +1,11 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
+Button
 export default function Home() {
   return (
-    
+
     <div>
-      <Image
-        src="/images/nextjs.png"
-        alt="Next.js Logo"
-        width={200}
-        height={200}
-      />
-      <h1>Next.js + Shadcn Design</h1>
-      <p>
-        Get started by editing <code>src/pages/index.tsx</code>
-      </p>
+      <Button type="button">Click me</Button>
     </div>
   );
 }
