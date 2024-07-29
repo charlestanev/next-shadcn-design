@@ -2,6 +2,15 @@
 import React from 'react';
 import { ResponsiveBump } from '@nivo/bump';
 
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle
+} from "@/components/ui/card"
+
+
 const MyResponsiveBump = (props: any) => {
     return (
         <ResponsiveBump
@@ -175,11 +184,15 @@ const General = () => {
         }
     ];
 
-    return (
-        <div className="w-full h-[400px]">
-            <MyResponsiveBump data={data} />
-        </div>
-    );
+    return <Card className="w-full">
+            <CardHeader>
+                <CardTitle>Historical Performance Trends</CardTitle>
+                <CardDescription>Track the performance and ranking shifts of 12 different series over a five-year period.</CardDescription>
+            </CardHeader>
+            <CardContent className="grid gap-4 h-[400px]">
+                <MyResponsiveBump data={data} />
+            </CardContent>
+        </Card>
 };
 
 export default General;
