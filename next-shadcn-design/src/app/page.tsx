@@ -1,12 +1,9 @@
-import { Button } from "@/components/ui/button";
+import General from "@/components/Cards/General";
 
-Button
 export default function Home() {
   return (
-
     <div>
-      Home
-      <Button type="button">Click me</Button>
+      <General />
     </div>
   );
 }
