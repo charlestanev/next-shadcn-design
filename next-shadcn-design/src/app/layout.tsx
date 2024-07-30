@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
+import styles from "../app/styles.module.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} flex items-start justify-between`}>
+    <html lang="en" className={styles["deba"]}>
+      <body className={`${inter.className} flex items-start justify-between bg-[#f080808c]`}>
           <Sidebar/>
           <main className="grid h-full pl-[300px]" style={{
-            width: "calc(100% - 300px)"
+            // width: "calc(100% - 300px)"
           }}>
           <Header/>
           <div className="p-8">
