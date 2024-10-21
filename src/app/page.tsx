@@ -14,7 +14,7 @@ export default function Home() {
         </div>
       </div>
       <div className="grid grid-cols-3 gap-[32px]">
-        <Lines className="h-[300px]">loorem ipsum</Lines>
+        <Lines />
         <Card className="h-[300px]">loorem ipsum</Card>
         <Card className="h-[300px]">loorem ipsum</Card>
       </div>

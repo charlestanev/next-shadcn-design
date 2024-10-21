@@ -1,21 +1,13 @@
 'use client';
 import React from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ResponsiveBump } from '@nivo/bump';
 
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle
-} from "@/components/ui/card"
-
-
-const MyResponsiveBump = (props: any) => {
+const MyResponsiveBump = (props: any): any => {
     return (
         <ResponsiveBump
             data={props.data}
-            colors={{ scheme: 'spectral' }}
+            colors={{ scheme: 'spectral' }} // Ensure this color scheme is valid and supported
             lineWidth={3}
             activeLineWidth={6}
             inactiveLineWidth={3}
@@ -56,9 +48,28 @@ const MyResponsiveBump = (props: any) => {
             }}
             margin={{ top: 40, right: 100, bottom: 40, left: 60 }}
             axisRight={null}
+            interpolation="linear"
+            xPadding={0.5}
+            xOuterPadding={0.5}
+            useMesh={true}
+            startLabel={(d) => d.id}
+            startLabelPadding={10}
+            startLabelTextColor={{ from: 'color', modifiers: [['darker', 1.4]] }}
+            endLabel={(d) => d.id}
+            endLabelPadding={10}
+            endLabelTextColor={{ from: 'color', modifiers: [['darker', 1.4]] }}
+            theme={{ background: '#ffffff' }}
+            opacity={1}
+            activeOpacity={0.9}
+            yOuterPadding={0}  // Adjust this based on your layout needs
+            inactivePointBorderWidth={0}
+            enableGridX={true}
+            enableGridY={true}
+            isInteractive={true}
         />
     );
 };
+
 
 const General = () => {
     const data = [
@@ -184,7 +195,8 @@ const General = () => {
         }
     ];
 
-    return <Card className="w-full">
+    return (
+        <Card className="w-full">
             <CardHeader>
                 <CardTitle>Historical Performance Trends</CardTitle>
                 <CardDescription>Track the performance and ranking shifts of 12 different series over a five-year period.</CardDescription>
@@ -193,6 +205,7 @@ const General = () => {
                 <MyResponsiveBump data={data} />
             </CardContent>
         </Card>
+    );
 };
 
 export default General;
