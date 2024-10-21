@@ -1,6 +1,7 @@
 import Calendar from "@/components/Cards/Calendar";
 import General from "@/components/Cards/General";
 import { Card } from "@/components/ui/card";
+import Lines from "./Lines";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         </div>
       </div>
       <div className="grid grid-cols-3 gap-[32px]">
-        <Card className="h-[300px]">loorem ipsum</Card>
+        <Lines className="h-[300px]">loorem ipsum</Lines>
         <Card className="h-[300px]">loorem ipsum</Card>
         <Card className="h-[300px]">loorem ipsum</Card>
       </div>

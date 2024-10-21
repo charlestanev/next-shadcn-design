@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={styles["deba"]}>
-      <body className={`${inter.className} flex items-start justify-between bg-[#f080808c]`}>
+      <body className={`${inter.className} flex items-start justify-between`}>
         <Sidebar />
         <main className="grid h-full pl-[300px]" style={{
           // width: "calc(100% - 300px)"
