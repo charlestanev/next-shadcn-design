@@ -24,7 +24,7 @@ const MyResponsiveTimeRange = ({ data /* see data tab */ }: any) => {
     );
 };
 
-export default function Calendar() {    
+export default function Calendar() {
 
     function generateDataForYear2024() {
         const data = [];
