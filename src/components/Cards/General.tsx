@@ -66,6 +66,13 @@ const MyResponsiveBump = (props: any): any => {
             enableGridX={true}
             enableGridY={true}
             isInteractive={true}
+            defaultActiveSerieIds={[]}
+            lineTooltip={() => null}
+            pointTooltip={() => null}
+            role="application"
+            layers={['grid', 'axes', 'lines', 'points']}
+            renderWrapper={true}
+            debugMesh={false}
         />
     );
 };
